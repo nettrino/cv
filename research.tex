@@ -1,0 +1,100 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\cvsection{Research Experience}
+
+\cvsubsection{Software Testing}
+
+\begin{cvparagraph}
+
+Automatically discovering bugs in security-sensitive code is hard.  In my
+recent work, I designed and developed \nezha~[\ref{itm:nezha}],
+an evolutionary-based,
+input-format-agnostic fuzzer which focuses on semantic bugs. This fuzzer
+utilizes novel black-box and gray-box input generation mechanisms and has found
+multiple bugs in security critical applications like SSL libraries (\eg
+LibreSSL, GnuTLS, WolfSSL) and anti-virus software, reporting semantic bugs
+missed by state-of-the-art fuzzers like
+\href{http://lcamtuf.coredump.cx/afl/}{AFL} and
+\href{http://llvm.org/docs/LibFuzzer.html}{libFuzzer}.
+
+When auditing an application for bugs and vulnerabilities, it is vital to
+determine what constitutes a true bug, rather than a developer-intended
+violation of a specification. In previous work, I co-developed
+\intflow [\ref{itm:intflow}], a compiler extension which uses taint
+analysis to report integer errors, taking into account common developer practices
+to reduce false positives. \intflow achieves 89\% reduction in
+false positives compared to the Clang-based Integer Overflow Checker (IOC).
+
+My latest research in this field attempts to enhance static analysis tools to
+further improve fuzzing, as well as to detect new types of bugs such as
+resource exhaustion bugs~[\ref{itm:slowfuzz}].
+\end{cvparagraph}
+
+\cvsubsection{Software Hardening}
+
+\begin{cvparagraph}
+
+Applications and Operating Systems can be separated into discreet parts, each
+facing different types of threats. In the past, I have worked on software
+hardening defenses, aiming at efficiently addressing such security issues. One
+such example of my work is \dynaguard [\ref{itm:dynaguard}], which secures
+canary-based protections against brute-force attacks. \dynaguard comes in two
+flavors, a compiler-based, inducing a 1.2\% overhead, and a version
+implemented using Dynamic Binary Instrumentation (DBI), which can applied
+as-is to black-box binaries.
+
+Another defense in this space which I have co-developed is, \krx a practical
+and comprehensive kernel hardening scheme that protects the Linux kernel
+from code-reuse attacks [\ref{itm:krx}]. The above scheme combines an
+execute-only memory principle with code diversification defenses, and can
+benefit from hardware support (\eg MPX on modern Intel CPUs) to optimize
+performance.
+
+\end{cvparagraph}
+
+\cvsubsection{Privacy}
+
+\begin{cvparagraph}
+
+Modern users face a multitude of privacy threats. In my research, I seek to
+evaluate the privacy guarantees that modern services provide, as well as to
+develop tools that enable users to use these services in a transparent,
+privacy-preserving manner. In
+past work, I co-performed a formal analysis of the defenses that major
+Location Based Services (LBSes)[\ref{itm:istalker},\ref{itm:istalker_tops}]
+deploy against location disclosure attacks. I also co-developed novel attacks
+to bypass these defenses, across all major services, like Facebook, Foursquare
+and others, and was the primary author of an open-source Python
+framework for auditing Location Based Services with respect to their
+location privacy guarantees.
+
+With respect to Web transparency, in previous work I co-developed XRay
+[\ref{itm:xray}], a framework that utilizes differential correlation to
+determine which particular actions of users (emails, YouTube views and
+clicks \etc) are linked with their targeting by online services.
+
+My latest work in this field involves developing new methods to fingerprint
+users, using behavioral patterns derived form their online presence, and
+implementing viable, real-world defenses for the users' protection against
+such attacks.
+
+\end{cvparagraph}
+
+\cvsubsection{Web Security}
+\begin{cvparagraph}
+
+In 2014 I developed a compiler extension offering SQL injection protection to
+C/C++ applications. Currently, I am co-developing a symbolic execution
+engine for PHP, which operates at the PHP interpreter level and fully supports
+database operations and loose types. Finally, some of my
+current research in the field involves examining the discrepancies in the
+way the various entities of the Web ecosystem handle content, developing novel
+attacks due to content handling confusion and suggesting real-world defenses
+for the presented attacks.
+\end{cvparagraph}
+
