@@ -12,15 +12,16 @@
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
-
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[12pt, a4paper]{awesome-cv}
 
+\usepackage{moresize}
+
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=1.4cm, right=1.4cm, bottom=1.4cm, footskip=.5cm}
+\geometry{left=1.4cm, top=2cm, right=1.4cm, bottom=2cm, footskip=.5cm}
 
 
 % Specify the location of the included fonts
@@ -99,13 +100,14 @@
 %-------------------------------------------------------------------------------
 \input{interests.tex}
 \input{education.tex}
-\input{research.tex}
 \input{experience.tex}
 \input{talks.tex}
 \input{skills.tex}
 \input{honors.tex}
-\input{teaching.tex}
 \input{service.tex}
+\input{software.tex}
+\input{teaching.tex}
+% \input{research.tex}
 \input{publications.tex}
 
 %-------------------------------------------------------------------------------
