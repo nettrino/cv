@@ -6,4 +6,4 @@
 
 #### OS X
 
-Download and install [MacTeX](https://tug.org/mactex/mactex-download.html)
+Download and install [MacTeX](https://tug.org/mactex/mactex-download.html).
